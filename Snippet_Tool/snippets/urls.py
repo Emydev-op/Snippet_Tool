@@ -7,6 +7,7 @@ urlpatterns = [
     path('snippets/<int:pk>/', views.SnippetDetail.as_view(), name='snippetDetail'),
     path("users/", views.UserList.as_view()),  # new
     path("users/<int:pk>/", views.UserDetail.as_view()),
+    path("", views.api_root),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
